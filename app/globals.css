@@ -494,6 +494,22 @@
         background-color: #32e7ff;
         }
 
+        /* Animation Start */
+        
+            .animate-box{
+                transform: translateY(100px);
+                opacity: 0;
+                transition: all 0.6 ease;
+            }
+
+            .animate-box.show {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+        /* Animation End */
+
+    
         /* Responsive */
         @media (max-width: 1400px) {
         .floating-bg {
