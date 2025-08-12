@@ -1,6 +1,31 @@
 "use client"
 
+// import { useRouter } from "next/router";
+import { useEffect } from "react";
+
 export default function Navbar() {
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const navbar = document.querySelector('.navbar');
+            const navLinks = document.querySelectorAll('.navbar-link');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navLinks.forEach(link => {
+                    link.classList.add('scrolled');
+                });
+            } else {
+                navbar.classList.remove('scrolled');
+                navLinks.forEach(link => {
+                    link.classList.remove('scrolled');
+                });
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
         <section className="section-1" id="home">
             <nav className="navbar">
