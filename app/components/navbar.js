@@ -1,7 +1,6 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {motion} from 'framer-motion';
 
 export default function Navbar() {
  const texts = ['Creative Design', 'Modern UI/UX', 'Responsive Layouts'];
@@ -74,20 +73,15 @@ export default function Navbar() {
    </nav>
    <div className="floating-bg"></div>
 
-   <motion.h1
+   <h1
     className="section-1-heading"
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{duration: 0.5}}
    >
     {displayedText}
-    <motion.span
-     animate={{opacity: [0, 1, 0]}}
-     transition={{repeat: Infinity, duration: 0.8}}
-    >
-     |
-    </motion.span>
-   </motion.h1>
+    <span className="blinking-cursor">|</span>
+   </h1>
 
    <div className="logo">
     <i className="fas fa-bezier-curve"></i>

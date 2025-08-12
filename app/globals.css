@@ -494,20 +494,21 @@
         background-color: #32e7ff;
         }
 
-        /* Animation Start */
+        /* Animation cursor Start  */
         
-            .animate-box{
-                transform: translateY(100px);
-                opacity: 0;
-                transition: all 0.6 ease;
-            }
+        .blinking-cursor {
+            display: inline-block;
+            margin-left: 2px;
+            animation: blink 0.9s infinite;
+        }
 
-            .animate-box.show {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
 
-        /* Animation End */
+
+        /* Animation cursor End */
 
     
         /* Responsive */
